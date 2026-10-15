@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <meta
+    name="description"
+    content="A private, practical tool for turning the wish to connect into a small human step."
+  >
+  <title>Human Bridge</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <p class="eyebrow">A small step toward someone real</p>
+      <h1>Human Bridge</h1>
+      <p>
+        Use this space to make a human connection feel a little easier.
+        There is no score, streak, or pressure to share anything.
+      </p>
+    </header>
+
+    <section class="panel" aria-labelledby="check-in-title">
+      <h2 id="check-in-title">What would help right now?</h2>
+      <label for="need">Choose the closest fit</label>
+      <select id="need">
+        <option value="reach-out">I want to reach out, but I’m unsure how</option>
+        <option value="company">I’d like some company</option>
+        <option value="activity">I want to do something with someone</option>
+        <option value="listen">I need someone to listen</option>
+        <option value="reflect">I just want to think things through</option>
+      </select>
+      <button id="suggest-button" type="button">Suggest a small step</button>
+      <div id="suggestion" class="suggestion" aria-live="polite">
+        Pick an option to see a few low-pressure ideas.
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="draft-title">
+      <h2 id="draft-title">Draft a message</h2>
+      <p class="hint">
+        Make it sound like you. Nothing is sent from this page.
+      </p>
+      <label for="message">Your message</label>
+      <textarea
+        id="message"
+        rows="4"
+        maxlength="500"
+        placeholder="Write a simple message, or use a starter below."
+      ></textarea>
+      <div class="button-row">
+        <button id="starter-button" class="secondary" type="button">
+          Add a starter
+        </button>
+        <button id="copy-button" class="secondary" type="button">
+          Copy message
+        </button>
+      </div>
+      <p id="message-status" class="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel" aria-labelledby="plan-title">
+      <h2 id="plan-title">Keep one small plan</h2>
+      <label for="plan">Optional: what’s one step you might take?</label>
+      <input
+        id="plan"
+        type="text"
+        maxlength="160"
+        placeholder="For example: invite Sam for a walk"
+      >
+      <button id="save-plan-button" type="button">Save on this device</button>
+      <ul id="plan-list" class="plan-list" aria-live="polite"></ul>
+      <div class="button-row">
+        <button id="export-button" class="secondary" type="button">
+          Export my plans
+        </button>
+        <button id="clear-button" class="danger" type="button">
+          Delete saved plans
+        </button>
+      </div>
+      <p id="plan-status" class="status" aria-live="polite"></p>
+    </section>
+
+    <footer>
+      <p>
+        Your plans are stored in this browser on this device. This tool does not
+        contact anyone for you and is not a substitute for human or professional support.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
